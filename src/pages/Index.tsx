@@ -18,7 +18,7 @@ const Navigation = () => {
         <button onClick={() => scrollToSection('home')} className="neon-underline text-foreground hover:text-primary transition-smooth">
           Home
         </button>
-        <a href="#resume" className="neon-underline text-foreground hover:text-primary transition-smooth">
+        <a href="/Dhanya_P_Resume.pdf" target="_blank" rel="noopener noreferrer" className="neon-underline text-foreground hover:text-primary transition-smooth">
           Resume
         </a>
         <button onClick={() => scrollToSection('projects')} className="neon-underline text-foreground hover:text-primary transition-smooth">
@@ -60,7 +60,11 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold px-8 py-3">
+          <Button 
+            size="lg" 
+            className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold px-8 py-3"
+            onClick={() => window.open('/Dhanya_P_Resume.pdf', '_blank')}
+          >
             <ExternalLink className="mr-2 h-4 w-4" />
             Download Resume
           </Button>
@@ -144,7 +148,7 @@ const About = () => {
           <div className="relative animate-fade-in-up">
             <div className="relative max-w-md mx-auto">
               <img 
-                src={dhanyaPhoto} 
+                src="/lovable-uploads/78d756e8-d8b6-4745-888f-beb87a699d7c.png"
                 alt="Dhanya P - Aspiring ML Engineer" 
                 className="w-full rounded-2xl shadow-card border-2 border-primary/20"
               />
