@@ -18,7 +18,7 @@ const Navigation = () => {
         <button onClick={() => scrollToSection('home')} className="neon-underline text-foreground hover:text-primary transition-smooth">
           Home
         </button>
-        <a href="/Dhanya_P_Resume.pdf" target="_blank" rel="noopener noreferrer" className="neon-underline text-foreground hover:text-primary transition-smooth">
+        <a href="/lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png" target="_blank" rel="noopener noreferrer" className="neon-underline text-foreground hover:text-primary transition-smooth">
           Resume
         </a>
         <button onClick={() => scrollToSection('projects')} className="neon-underline text-foreground hover:text-primary transition-smooth">
@@ -63,7 +63,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary text-primary-foreground hover:bg-primary/90 glow-cyan font-semibold px-8 py-3"
-            onClick={() => window.open('/Dhanya_P_Resume.pdf', '_blank')}
+            onClick={() => window.open('/lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png', '_blank')}
           >
             <ExternalLink className="mr-2 h-4 w-4" />
             Download Resume
@@ -149,11 +149,11 @@ const About = () => {
           
           <div className="relative animate-fade-in-up">
             <div className="relative max-w-md mx-auto">
-              <img 
-                src="/lovable-uploads/78d756e8-d8b6-4745-888f-beb87a699d7c.png"
-                alt="Dhanya P - Aspiring ML Engineer" 
-                className="w-full rounded-2xl shadow-card border-2 border-primary/20"
-              />
+        <img 
+          src="/lovable-uploads/f1980d36-9a9f-4617-a306-c22d7c8f1036.png"
+          alt="Dhanya P - Aspiring ML Engineer" 
+          className="w-full rounded-2xl shadow-card border-2 border-primary/20"
+        />
               <div className="absolute -inset-4 bg-neon-gradient opacity-20 rounded-2xl blur-xl" />
             </div>
           </div>
@@ -172,8 +172,8 @@ const Projects = () => {
       title: "Restaurant Management System",
       description: "Developed a web-based application using Django and Python to streamline restaurant operations with features for managing food categories, menu items, customers, and order processing.",
       image: restaurantProject,
-      tags: ["Django", "Python", "MariaDB", "Web Development", "CRUD"],
-      techStack: ["Django", "Python", "MariaDB", "Bootstrap"],
+      tags: ["Django", "Python", "MySQL", "Web Development", "CRUD"],
+      techStack: ["Django", "Python", "MySQL", "Bootstrap"],
       github: "https://github.com/DHANYA-P-31/RestaurantManagementsystem",
       category: "Web Development"
     },
