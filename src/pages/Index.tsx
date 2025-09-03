@@ -94,7 +94,7 @@ const About = () => {
               My interests lie in machine learning and data science, aiming to uncover meaningful insights from data and develop innovative solutions.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Currently pursuing B.E in Computer Science at Government College of Technology, Coimbatore with a CGPA of 9.03. 
+              Currently pursuing B.E in Computer Science at Government College of Technology, Coimbatore. 
               I aim to deepen my understanding of machine learning and data science concepts through hands-on practice and real-world scenarios.
             </p>
             
@@ -108,10 +108,10 @@ const About = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-secondary">ML & Data Science</h3>
+                <h3 className="text-lg font-semibold mb-3 text-secondary">CS Concepts</h3>
                 <ul className="space-y-1 text-muted-foreground">
                   <li>Machine Learning</li>
-                  <li>NLP</li>
+                  <li>OOPS</li>
                   <li>Data Structures</li>
                 </ul>
               </div>
@@ -119,16 +119,18 @@ const About = () => {
                 <h3 className="text-lg font-semibold mb-3 text-primary">Tools & Frameworks</h3>
                 <ul className="space-y-1 text-muted-foreground">
                   <li>Django</li>
+                  <li>HTML</li>
                   <li>TailWind CSS</li>
                   <li>Jupyter Notebook</li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-secondary">Libraries</h3>
+                <h3 className="text-lg font-semibold mb-3 text-secondary">Libraries & Database</h3>
                 <ul className="space-y-1 text-muted-foreground">
                   <li>Sklearn</li>
                   <li>NumPy, Pandas</li>
                   <li>Matplotlib</li>
+                  <li>MySQL</li>
                 </ul>
               </div>
             </div>
@@ -172,7 +174,7 @@ const Projects = () => {
       image: restaurantProject,
       tags: ["Django", "Python", "MariaDB", "Web Development", "CRUD"],
       techStack: ["Django", "Python", "MariaDB", "Bootstrap"],
-      github: "https://github.com/DHANYA-P-31",
+      github: "https://github.com/DHANYA-P-31/RestaurantManagementsystem",
       category: "Web Development"
     },
     {
@@ -182,12 +184,12 @@ const Projects = () => {
       image: fakeNewsProject,
       tags: ["NLP", "Machine Learning", "LSTM", "Python", "AI"],
       techStack: ["Python", "NLP", "LSTM", "TailWind CSS", "Jupyter Notebook"],
-      github: "https://github.com/DHANYA-P-31",
+      github: "https://github.com/Q12AND8/FakeNewsDetection",
       category: "Machine Learning"
     }
   ];
 
-  const filters = ['All', 'Machine Learning', 'Web Development', 'NLP'];
+  const filters = ['All', 'Machine Learning', 'Web Development'];
   
   const filteredProjects = filter === 'All' 
     ? projects 
@@ -233,13 +235,13 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-smooth flex items-center justify-center">
                   <div className="flex gap-3">
-                    <Button size="sm" className="glow-cyan">
+                    <Button 
+                      size="sm" 
+                      className="glow-cyan"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
                       <Github className="mr-2 h-4 w-4" />
                       GitHub
-                    </Button>
-                    <Button variant="outline" size="sm" className="glow-purple">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Demo
                     </Button>
                   </div>
                 </div>
