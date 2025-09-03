@@ -24,7 +24,7 @@ const Navigation = () => {
         <button onClick={() => scrollToSection('projects')} className="neon-underline text-foreground hover:text-primary transition-smooth">
           Projects
         </button>
-        <a href="https://www.linkedin.com/in/dhanya-prabharam-6a4797293/" target="_blank" rel="noopener noreferrer" className="neon-underline text-foreground hover:text-primary transition-smooth">
+        <a href="https://www.linkedin.com/in/dhanya-prabharam/" target="_blank" rel="noopener noreferrer" className="neon-underline text-foreground hover:text-primary transition-smooth">
           LinkedIn
         </a>
         <button onClick={() => scrollToSection('contact')} className="neon-underline text-foreground hover:text-primary transition-smooth">
@@ -330,7 +330,7 @@ const Contact = () => {
                 </a>
                 
                 <a
-                  href="https://www.linkedin.com/in/dhanya-prabharam-6a4797293/"
+                  href="https://www.linkedin.com/in/dhanya-prabharam/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-smooth group"
@@ -376,7 +376,7 @@ const Footer = () => {
         </p>
         <div className="flex justify-center gap-6 mt-4">
           <a
-            href="https://www.linkedin.com/in/dhanya-prabharam-6a4797293/"
+            href="https://www.linkedin.com/in/dhanya-prabharam/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-smooth"
