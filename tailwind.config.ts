@@ -20,7 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				heading: ['Montserrat', 'system-ui', 'sans-serif'],
+				heading: ['Playfair Display', 'Georgia', 'serif'],
+				display: ['Playfair Display', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -28,16 +29,18 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				'background-secondary': 'hsl(var(--background-secondary))',
+				'background-tertiary': 'hsl(var(--background-tertiary))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					light: 'hsl(var(--primary-light))',
+					dark: 'hsl(var(--primary-dark))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
-					glow: 'hsl(var(--secondary-glow))'
+					light: 'hsl(var(--secondary-light))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -45,23 +48,29 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					light: 'hsl(var(--accent-light))'
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
-					hover: 'hsl(var(--card-hover))'
+					hover: 'hsl(var(--card-hover))',
+					border: 'hsl(var(--card-border))'
 				},
 			},
 			backgroundImage: {
 				'hero-gradient': 'var(--gradient-hero)',
 				'card-gradient': 'var(--gradient-card)',
-				'neon-gradient': 'var(--gradient-neon)',
+				'primary-gradient': 'var(--gradient-primary)',
+				'secondary-gradient': 'var(--gradient-secondary)',
+				'accent-gradient': 'var(--gradient-accent)',
 			},
 			boxShadow: {
-				'glow-cyan': 'var(--glow-cyan)',
-				'glow-purple': 'var(--glow-purple)',
+				'glow-primary': 'var(--glow-primary)',
+				'glow-secondary': 'var(--glow-secondary)',
+				'glow-accent': 'var(--glow-accent)',
 				'card': 'var(--shadow-card)',
+				'elevated': 'var(--shadow-elevated)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
