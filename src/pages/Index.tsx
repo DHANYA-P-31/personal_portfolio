@@ -17,7 +17,7 @@ const Navigation = () => {
         <button onClick={() => scrollToSection('home')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
           Home
         </button>
-        <a href="/lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
+        <a href="lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
           Resume
         </a>
         <button onClick={() => scrollToSection('projects')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
@@ -62,7 +62,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-10 py-4 text-lg transition-spring shadow-elevated"
-            onClick={() => window.open('/lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png', '_blank')}
+            onClick={() => window.open('lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png', '_blank')}
           >
             <ExternalLink className="mr-3 h-5 w-5" />
             Download Resume
