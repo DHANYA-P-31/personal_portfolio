@@ -1,36 +1,76 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { ExternalLink, Github, Linkedin, Mail, Phone, MapPin, Menu, X } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
 import restaurantProject from "@/assets/restaurant-project.jpg";
 import fakeNewsProject from "@/assets/fake-news-project.jpg";
 import { useState } from "react";
 
 const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 right-0 z-50 p-8">
-      <div className="flex gap-8 text-sm font-medium">
-        <button onClick={() => scrollToSection('home')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
-          Home
-        </button>
-        <a href="lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
-          Resume
-        </a>
-        <button onClick={() => scrollToSection('projects')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
-          Projects
-        </button>
-        <a href="https://www.linkedin.com/in/dhanya-prabharam/" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
-          LinkedIn
-        </a>
-        <button onClick={() => scrollToSection('contact')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
-          Contact
-        </button>
-      </div>
-    </nav>
+    <>
+      {/* Desktop Navigation */}
+      <nav className="hidden md:block fixed top-0 right-0 z-50 p-8">
+        <div className="flex gap-8 text-sm font-medium">
+          <button onClick={() => scrollToSection('home')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
+            Home
+          </button>
+          <a href="/resume.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
+            Resume
+          </a>
+          <button onClick={() => scrollToSection('projects')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
+            Projects
+          </button>
+          <a href="https://www.linkedin.com/in/dhanya-prabharam/" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
+            LinkedIn
+          </a>
+          <button onClick={() => scrollToSection('contact')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
+            Contact
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Navigation */}
+      <nav className="md:hidden fixed top-0 right-0 z-50 p-4">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="bg-background/80 backdrop-blur-sm border border-border hover:bg-primary/10"
+        >
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </Button>
+        
+        {isMenuOpen && (
+          <div className="absolute top-16 right-0 bg-background/95 backdrop-blur-md border border-border rounded-2xl p-6 min-w-48 shadow-elevated">
+            <div className="flex flex-col gap-4 text-sm font-medium">
+              <button onClick={() => scrollToSection('home')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
+                Home
+              </button>
+              <a href="/resume.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth py-2">
+                Resume
+              </a>
+              <button onClick={() => scrollToSection('projects')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
+                Projects
+              </button>
+              <a href="https://www.linkedin.com/in/dhanya-prabharam/" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth py-2">
+                LinkedIn
+              </a>
+              <button onClick={() => scrollToSection('contact')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
+                Contact
+              </button>
+            </div>
+          </div>
+        )}
+      </nav>
+    </>
   );
 };
 
@@ -48,30 +88,30 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/90 z-10" />
       
-      <div className="relative z-20 text-center max-w-5xl mx-auto px-8 animate-fade-in-up">
+      <div className="relative z-20 text-center max-w-5xl mx-auto px-4 sm:px-8 animate-fade-in-up">
         <div className="floating-element">
-          <h1 className="text-6xl md:text-8xl font-display font-bold mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-8xl font-display font-bold mb-6 sm:mb-8 leading-tight">
             Hi, I'm <span className="gradient-text">Dhanya P</span> 👋
           </h1>
-          <p className="text-xl md:text-3xl mb-12 text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl lg:text-3xl mb-8 sm:mb-12 text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto">
             Aspiring Machine Learning Engineer | Passionate about AI, Data, and Innovation
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-bounce-in">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-bounce-in">
           <Button 
             size="lg" 
-            className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-10 py-4 text-lg transition-spring shadow-elevated"
-            onClick={() => window.open('lovable-uploads/6079338e-3630-42f5-b7b2-3105d60159e7.png', '_blank')}
+            className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg transition-spring shadow-elevated w-full sm:w-auto"
+            onClick={() => window.open('/resume.png', '_blank')}
           >
-            <ExternalLink className="mr-3 h-5 w-5" />
+            <ExternalLink className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
             Download Resume
           </Button>
           <Button 
             variant="outline" 
             size="lg" 
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="border-2 border-secondary bg-transparent text-secondary hover:bg-secondary/10 hover:scale-105 glow-secondary font-semibold px-10 py-4 text-lg transition-spring"
+            className="border-2 border-secondary bg-transparent text-secondary hover:bg-secondary/10 hover:scale-105 glow-secondary font-semibold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg transition-spring w-full sm:w-auto"
           >
             Explore Projects
           </Button>
@@ -83,11 +123,11 @@ const Hero = () => {
 
 const About = () => {
   return (
-    <section id="about" className="py-32 px-8">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="animate-fade-in-left">
-            <h2 className="text-5xl font-display font-bold mb-8 gradient-text-primary">About Me</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 sm:mb-8 gradient-text-primary">About Me</h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-light">
               I am a Computer Science and Engineering student with a passion for solving real-world problems through technology. 
               My interests lie in machine learning and data science, aiming to uncover meaningful insights from data and develop innovative solutions.
@@ -97,7 +137,7 @@ const About = () => {
               I aim to deepen my understanding of machine learning and data science concepts through hands-on practice and real-world scenarios.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
               <div className="card-gradient p-6 rounded-2xl hover-lift">
                 <h3 className="text-xl font-semibold mb-4 text-primary flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -249,10 +289,10 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <section id="projects" className="py-32 px-8 bg-background-secondary/50">
+    <section id="projects" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8 bg-background-secondary/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="gradient-text-secondary">Featured Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-8">
@@ -277,7 +317,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
@@ -346,10 +386,10 @@ const Projects = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 px-8">
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-5xl font-display font-bold mb-6 gradient-text-primary">Get in Touch</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6 gradient-text-primary">Get in Touch</h2>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
             Let's connect and discuss opportunities in Machine Learning and AI
           </p>
