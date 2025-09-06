@@ -22,9 +22,6 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('home')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
             Home
           </button>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
-            Resume
-          </a>
           <button onClick={() => scrollToSection('projects')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
             Projects
           </button>
@@ -54,9 +51,6 @@ const Navigation = () => {
               <button onClick={() => scrollToSection('home')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
                 Home
               </button>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth py-2">
-                Resume
-              </a>
               <button onClick={() => scrollToSection('projects')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
                 Projects
               </button>
