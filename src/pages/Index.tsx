@@ -22,7 +22,7 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('home')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
             Home
           </button>
-          <a href="/resume.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth">
             Resume
           </a>
           <button onClick={() => scrollToSection('projects')} className="elegant-underline text-foreground hover:text-primary transition-smooth">
@@ -54,7 +54,7 @@ const Navigation = () => {
               <button onClick={() => scrollToSection('home')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
                 Home
               </button>
-              <a href="/resume.png" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth py-2">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="elegant-underline text-foreground hover:text-primary transition-smooth py-2">
                 Resume
               </a>
               <button onClick={() => scrollToSection('projects')} className="text-left elegant-underline text-foreground hover:text-primary transition-smooth py-2">
@@ -102,7 +102,7 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg transition-spring shadow-elevated w-full sm:w-auto"
-            onClick={() => window.open('/resume.png', '_blank')}
+            onClick={() => window.open('/resume.pdf', '_blank')}
           >
             <ExternalLink className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
             Download Resume
@@ -287,7 +287,7 @@ const Projects = () => {
       image: fakeNewsProject, // Using existing image as placeholder
       tags: ["Python", "Streamlit", "Finance", "MPT", "Data Science"],
       techStack: ["Python", "Streamlit", "PyPortfolioOpt", "Yahoo Finance API", "Plotly"],
-      github: "#", // Placeholder - update with actual GitHub link
+      github: "https://github.com/DHANYA-P-31/PortfolioOptimizationUsingMPT",
       category: "Machine Learning"
     }
   ];
