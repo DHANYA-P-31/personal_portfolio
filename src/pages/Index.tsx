@@ -93,7 +93,7 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-bounce-in">
-          <a href="https://drive.google.com/file/d/1TgoOLqBr7JaTOqBUpsCF9Metob7CtDRe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1TgoOLqBr7JaTOqBUpsCF9Metob7CtDRe/preview" target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
               className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg transition-spring shadow-elevated w-full sm:w-auto"
