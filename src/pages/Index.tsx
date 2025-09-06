@@ -93,14 +93,15 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-bounce-in">
-          <Button 
-            size="lg" 
-            className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg transition-spring shadow-elevated w-full sm:w-auto"
-            onClick={() => window.open('/resume.pdf', '_blank')}
-          >
-            <ExternalLink className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
-            Download Resume
-          </Button>
+          <a href="https://drive.google.com/file/d/1TgoOLqBr7JaTOqBUpsCF9Metob7CtDRe/view?usp=sharingr">
+            <Button 
+              size="lg" 
+              className="bg-primary-gradient text-primary-foreground hover:scale-105 glow-primary font-semibold px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg transition-spring shadow-elevated w-full sm:w-auto"
+            >
+              <ExternalLink className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
+              Download Resume
+            </Button>
+          </a>
           <Button 
             variant="outline" 
             size="lg" 
