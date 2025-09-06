@@ -279,6 +279,16 @@ const Projects = () => {
       techStack: ["Python", "NLP", "LSTM", "TailWind CSS", "Jupyter Notebook"],
       github: "https://github.com/Q12AND8/FakeNewsDetection",
       category: "Machine Learning"
+    },
+    {
+      id: 3,
+      title: "Portfolio Optimizer Using MPT",
+      description: "Built a financial portfolio optimization tool leveraging Modern Portfolio Theory (MPT). Implemented features for fetching historical stock data using Yahoo Finance, calculating returns and risk metrics, and optimizing portfolios for maximum Sharpe ratio and minimum volatility. Designed an interactive Streamlit dashboard with Efficient Frontier visualization, discrete share allocation, and downloadable CSV reports.",
+      image: fakeNewsProject, // Using existing image as placeholder
+      tags: ["Python", "Streamlit", "Finance", "MPT", "Data Science"],
+      techStack: ["Python", "Streamlit", "PyPortfolioOpt", "Yahoo Finance API", "Plotly"],
+      github: "#", // Placeholder - update with actual GitHub link
+      category: "Machine Learning"
     }
   ];
 
